@@ -1,0 +1,6 @@
+#Write a script which displays only the login, UID and Path of each entry of the /etc/passwd file.
+
+#!/bin/sh
+cat /etc/passwd | grep -v '#' | awk -F':' '{ $1=$1","; $3=$3","; print $1, $3, $6 }'
+# note "grep -v '#'" is not necessary when the script is run on Debian VM
+# as there is no comment lines (first 10 lines are # at front in mac os)

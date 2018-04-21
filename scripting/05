@@ -1,0 +1,4 @@
+#Write a script which displays 42.
+
+#!/bin/sh
+echo 42

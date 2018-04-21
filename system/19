@@ -1,0 +1,5 @@
+#With the previous command, forbid all others
+
+# iptables -A INPUT -j REJECT
+# this time, INPUT Chain policy does not matter because above line will reject
+# all IP addresses that reach the bottom of the INPUT rules

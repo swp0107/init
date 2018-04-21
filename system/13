@@ -1,0 +1,7 @@
+#Name the command that find currently running processes
+
+# ps aux
+#
+# a = show processes for all users
+# u = display the process's user/owner
+# x = also show processes not attached to a terminal

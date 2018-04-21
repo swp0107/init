@@ -1,0 +1,3 @@
+#Get the complete path of the file that contains the IP address of the DNS server you're using
+/etc/resolv.conf
+#it may be denied due to permission denial. Then, cat /etc/resolv.conf. Then it shows.

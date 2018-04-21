@@ -1,0 +1,6 @@
+#Figure out the server type.
+
+# nslookup of any domain will give "10.51.1.253" as the server
+# nslookup is a tool for querying internet domain name servers (ns).
+# "10.51.1.253" is DNS server (nameserver).
+# "vim /etc/resolv.conf" confirms it.

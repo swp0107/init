@@ -1,0 +1,6 @@
+#Figure out the exact size of each folder of /var
+
+# du -sh /var/*
+# -s for displaying only the total for each
+# -h for displaying in human-readable format
+# /* for displaying each and every file

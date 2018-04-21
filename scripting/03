@@ -1,0 +1,12 @@
+#Write a script which displays the list of files from the folder given as parameter, sorted by size.
+
+#!/bin/sh
+if [ -d "$1" ]; then
+	ls -lS "$1"
+else
+	echo "Searching files ... No such files."
+fi
+
+# ls -Slb $1 | grep '^[-l]' | awk '{ print $9, $5 }' (one line)
+# above command excludes subdirectories in a folder and only lists files
+# in <"file name" "file size"> format

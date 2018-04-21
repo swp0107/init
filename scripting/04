@@ -1,0 +1,37 @@
+#Write a script which monitors the modifications made to the/etc/crontabfile 
+#and sends an e-mail torootif the file is modified. Create a scheduled task to run this script 
+#everyday at midnight.
+
+#!/bin/bash
+# add the following script to your cron table (crontab)
+# using "0 0 * * * root /path/to/script >> /etc/crontab"
+# Also, in order to do this exercise, you need to install mailutils
+# using "apt-get install mailutils"
+
+file=/etc/crontab
+md5old=/etc/crontab_copy
+
+if [[ ! -f $md5old ]]; then
+	touch $md5old
+fi
+
+filemd5=`md5sum $file | cut -d " " -f1`
+
+if [ -z $filemd5 ]; then
+	echo "Erro : filemd5 is empty"
+	exit 1
+else
+	if [ -f $md5old ]; then
+		savedmd5=`cat $md5old`
+		if [ -z $savedmd5 ]; then
+			echo "Error : savedmd5 is empty"
+			exit 1
+		fi
+		if [ "$savedmd5" == "$filemd5" ]; then
+			:
+		else
+			echo "crontab file has been changed. sending an email..." | mail -s "Alerttt" root
+		fi
+	fi
+fi
+echo $filemd5 > $md5old

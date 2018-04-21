@@ -1,0 +1,5 @@
+#What file contains the local DNS entries?
+
+# /etc/hosts
+# Since permission issue, try "vim /etc/hosts"
+# Then local DNS entries are there

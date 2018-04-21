@@ -1,0 +1,6 @@
+#With the previous command, authorize only IP addresses from 10.0.0.0/8 to connect to your system
+
+# iptables -A INPUT -s 10.0.0.0/8 -j ACCEPT
+# but before that, one needs to change the INPUT Chain policy to DROP
+# because we want to authorize only IP addresses from 10.0.0.0/8
+# this is done with "iptables --policy INPUT DROP"

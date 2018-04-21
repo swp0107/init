@@ -1,0 +1,4 @@
+#What file contains the RSA keys that are authorized to connect via SSH?
+
+# ~/.ssh/authorized_keys file on the computers you want to log in to
+# cat /etc/ssh/sshd_config | grep AuthorizedKeysFile | awk '{print $2}'

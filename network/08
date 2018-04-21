@@ -1,0 +1,6 @@
+#Find the provider of slash16.org
+
+# nslookup slash16.org gives several IP addresses that are of slash16.org
+# pick any one of those and do "whois"
+# for example, "whois 52.84.245.211" gives information about the IP address
+# from there, OrgName is "Amazon Technologies Inc."

@@ -1,0 +1,2 @@
+#Identify the default gateway in the routing table
+netstat -rn | grep "default" | grep "UGSc" | awk '{print $2}'

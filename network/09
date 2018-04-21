@@ -1,0 +1,6 @@
+#Find the external IP of 42.fr
+
+# the last line in "traceroute 42.fr" is the final path to the 42.fr from
+# my computer (the first line)
+# it is 163.172.250.13
+traceroute 42.fr
